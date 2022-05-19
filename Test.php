@@ -28,10 +28,15 @@ function send($msg){
 }
 
 send("");
+$text = readline("Command: ");
 while(true){
-  switch("тест"){
+  switch(mb_strtolower($text)){
     case "тест":
     send("это действительно тест");
+    break;
+    case "пока":
+    send("Очень жаль что ты уходишь, было весело");
+    exit;
     break;
     default:
     send("по скольку теста небыло, мы его провели: ". exec("uptime"));
