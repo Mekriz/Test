@@ -4,7 +4,7 @@ $white = "\e[0m";
 function checkVersion($version){
   $latest = explode(" ", file_get_contents("https://pastebin.com/raw/QsVueNFX"));
   if($latest[0] != $version){
-    send("Качай новую $latest версию пжж");
+    send("Качай новую $latest[0] версию пжж");
     exit;
   }
 return $latest[1];
