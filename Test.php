@@ -28,8 +28,8 @@ function send($msg){
 }
 
 send("");
-$text = readline("Command: ");
 while(true){
+  $text = readline("Command: ");
   switch(mb_strtolower($text)){
     case "тест":
     send("это действительно тест");
