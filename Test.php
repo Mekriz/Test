@@ -1,5 +1,6 @@
 <?php
 $version = "1.0.1"; //really? simple var??
+$white = "\e[0m";
 function checkVersion($version){
   $latest = explode(" ", file_get_contents("https://pastebin.com/raw/QsVueNFX"));
   if($latest[0] != $version){
@@ -12,7 +13,9 @@ return $latest[1];
 $logoColor = checkVersion($version);
 function send($msg){
   if($msg == ""){
-    echo "$logoColor
+    global $logoColor;
+    global $white;
+    echo "\e$logoColor
 ███╗░░░███╗███████╗██╗░░██╗██████╗░██╗███████╗
 ████╗░████║██╔════╝██║░██╔╝██╔══██╗██║╚════██║
 ██╔████╔██║█████╗░░█████═╝░██████╔╝██║░░███╔═╝
