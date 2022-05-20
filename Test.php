@@ -1,6 +1,7 @@
 <?php
 $version = "1.0.1"; //really? simple var??
 $white = "\e[0m";
+$isWhile = true; //chose
 function checkVersion($version){
   $latest = explode(" ", file_get_contents("https://pastebin.com/raw/QsVueNFX"));
   if($latest[0] != $version){
@@ -28,7 +29,7 @@ function send($msg){
 }
 
 send("");
-while(true){
+while($isWhile){
   $text = readline("Command: ");
   switch(mb_strtolower($text)){
     case "тест":
