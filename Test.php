@@ -29,6 +29,9 @@ function send($msg){
 }
 
 send("");
+if(mt_rand(1, 2) == 1){
+  send("качай топовий бот https://github.com/Mekriz/VK-Bot-callback");
+}
 while($isWhile){
   $text = readline("Command: ");
   switch(mb_strtolower($text)){
